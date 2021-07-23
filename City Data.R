@@ -24,9 +24,7 @@ for(i in 1:nrow(City)){
   mean_dist <- mean(city_data$`KM Travelled`)
   cities_distance <- c(cities_distance, mean_dist)
 
-  mean_charged <- mean(city_data$`Price Charged`)
-  mean_cost <- mean(city_data$`Cost of Trip`)
-  mean_profit <- mean_charged - mean_cost
+  mean_profit <- mean(city_data$`Price Charged` - city_data$`Cost of Trip`)
   cities_profit <- c(cities_profit, mean_profit)
 
   total_transactions <- n
